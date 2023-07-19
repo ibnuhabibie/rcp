@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gantt {
+  @apply flex dark:bg-slate-900 bg-white;
+}
+
+.gantt-member {
+  @apply w-80 border-r h-screen overflow-y-auto flex-shrink-0 sticky left-0 dark:bg-slate-900 bg-white dark:border-gray-800;
+}
+
+.gantt-member > .el-date-editor.el-input,
+.el-date-editor.el-input__wrapper {
+  @apply w-full;
+}
+
+.gantt-container {
+  @apply h-screen overflow-y-hidden overflow-x-auto;
+}
+
+.gantt-wrapper {
+  @apply flex text-center w-fit sticky top-0 z-10;
+}
+
+.gantt-months {
+  @apply flex;
+}
+
+.gantt-month {
+  @apply border-b dark:border-slate-800 h-8 items-center leading-8 font-bold uppercase text-sm dark:bg-slate-700 bg-gray-100 border-r dark:text-slate-300 text-black;
+}
+
+.gantt-dates {
+  @apply flex dark:bg-slate-700 bg-gray-100 dark:text-slate-200 text-black;
+}
+
+.gantt-dates > div {
+  min-width: 90px;
+  padding: 0.4rem;
+  @apply border-r border-b leading-none dark:border-slate-800;
+}
+
+.gantt-dates > div span:first-child {
+  @apply font-bold text-gray-400;
+}
+
+.member-load {
+  @apply flex border-b w-fit dark:border-slate-800;
+}
+
+.member-load > div {
+  @apply h-16 border-r flex-shrink-0 dark:border-slate-800;
+  width: 90px;
+}
+
+.member-load > div > .el-progress {
+  margin: 18px 9px 0;
+  cursor: pointer;
+}
+
+.member-load .el-progress-bar__innerText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.member-load .el-progress-bar__inner,
+.member-load .el-progress-bar__outer {
+  border-radius: 5px;
+}
+
+.capacity {
+  @apply py-1 w-20 text-center rounded-full text-sm text-white cursor-pointer;
+}
+
+/* Role Filter */
+.role-filter {
+  @apply w-full pt-1 pb-2 flex items-center px-2 border-b sticky top-8 dark:bg-slate-700 dark:border-slate-800 bg-gray-100;
+}
+
+.role-filter .el-select {
+  @apply w-full m-0;
+}
+
+/* Member Card */
+.member-card {
+  @apply flex gap-2 items-center py-2 px-3 border-b cursor-pointer dark:border-slate-800 dark:bg-slate-900 bg-white dark:hover:bg-slate-800 hover:bg-gray-100 dark:text-slate-300 text-black;
+}
+
+.member-card img {
+  @apply w-12 h-12 rounded-full border;
+}
+
+.member-card h3 {
+  @apply leading-none font-bold text-sm;
+}
+
+.member-card p {
+  @apply text-sm leading-none;
+}
+
+/* FAB */
+.fab {
+  @apply absolute bottom-8 right-10 w-16 h-16 bg-blue-500 flex items-center justify-center cursor-pointer rounded-full shadow-lg;
+}
